@@ -11,7 +11,6 @@
 <% if User.current.allowed_to?(:view_gantt, @project, :global => true) %>
 	<%= link_to(l(:label_gantt), :controller => 'gantts', :action => 'show', :project_id => @project) %><br />
 <% end %>
-<%= call_hook(:view_issues_sidebar_planning_bottom) %>
-
 <%= render_sidebar_queries %>
 <%= call_hook(:view_issues_sidebar_queries_bottom) %>
+<%= call_hook(:view_issues_sidebar_planning_bottom) %>
